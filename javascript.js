@@ -36,6 +36,15 @@ angular.module('portalApp')
 			details: 'Tangled'
 		}
 	];
+    $scope.chemquestions = [
+        {
+        	title: 'What is the molar mass of CO2?'
+        },
+        {
+        	title: 'A 100.0g sample of a given hydrocarbon when combused produces 338.0g of CO2 and 69.2g of H2). Find the empirical formula of the hydrocarbon'
+        },
+    
+    ]
     $scope.subchem = [
         {
             title:'CHE 102',
