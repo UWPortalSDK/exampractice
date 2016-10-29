@@ -40,9 +40,9 @@
     <wr>
         <wc><span class = "label label-success" clickable ng-click = "addQuestion(item)" >Add Question </span></wc>
         </wr>
-    <wr>
-        <wc><span class = "label label-success" clickable ng-click = "showRandomQuestion(item)" >Random One Question </span></wc>
-        </wr>
+    <wr clickable ng-click = "showRandomQuestion(item)">
+        <wc><span class = "label label-success" >Random One Question </span></wc>
+    </wr>
         <wr ng-repeat="item in che102questions" clickable ng-click="questionShow(item)">
             <wc>
                 <span class= "label label-success"> {{item.title}} </span>
@@ -50,19 +50,23 @@
     </wr>
 </script>
 
-<!-- random question page 3 -->
 <script type="text/ng-template" id="exampracticeRanQues.html">
     <wr>
         <wc>
-            <h1>Random One Question</h1>
+            <h3>Random One Question</h3>
+        </wc>
+    </wr>
+   <wr ng-repeat="item in randomquestions">
+        <wc>
+                <div>{{item.title}}
+            </div>
+            <div > {{item.qONE}} </div>
         </wc>
     </wr>
     <wr>
-        <wc><span class="label label-success">Random One Question</span></wc>
-    </wr>
-    <wr>
         <wc>
-             <input type="text" name="hello" value="input your answer..." />
+             <input type="text" name="" value="input your answer..." />
+            <input type="submit" name="" value="submit" />
         </wc>
     </wr>
 
@@ -107,7 +111,7 @@
         </wr>   
    <wr>
        <wc>
-           <body>Answer: {{questions.aONE}}</body>
+           <body>{{questions.aONE}}</body>
         </wc>
     </wr>
 </script>

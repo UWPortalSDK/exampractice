@@ -1,6 +1,7 @@
 <!-- Primary template that will get shown when widget loads 1 -->
 <script type="text/ng-template" id="exampracticeMain.html">
-    <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+   <div class="list"> 
+    <div class="item" ng-repeat="item in items" clickable ng-click="showDetails(item)">
         <widget-cell>
             <span class="itemName">{{item.title}}
             </span>
@@ -11,24 +12,26 @@
         <widget-cell>
             <widget-icon name="angle-right"></widget-icon>
         </widget-cell>
-    </widget-row>
+       </div>
+    </div>
 </script>
 
 <!-- each catagroy 2 -->
 <script type="text/ng-template" id="exampracticeDetails.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-    <wr>
+    <div class="list">
+        <div class="item">
         <wc>
             <h2>{{detailsItem.title}}</h2>
 
             <body>{{detailsItem.details}}</body>
         </wc>
-    </wr>
-    <wr ng-repeat="tag in detailsItem.tags" clickable ng-click="showSubDetails(item)">
+    </div>
+    <div class="item" ng-repeat="tag in detailsItem.tags" clickable ng-click="showSubDetails(item)">
         <wc>
             <span class="label label-success">{{tag}}</span>
         </wc>
-    </wr>
+        </div></div>
 </script>
 
 <!-- random question page 3 -->
