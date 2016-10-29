@@ -25,13 +25,13 @@ angular.module('portalApp')
 		},
 		{
 			title: 'Biology',
-			tags: ['tag C', 'tag K', 'tag B'],
-			details: 'Cells'
+			tags: ['BIO 134'],
+			details: 'I have photographic memory!!'
 		},
 		{
 			title:'Linear Circuits',
 			tags: ['tag A', 'tag B', 'tag C'],
-			details: 'Curabitur scelerisque lorem risus, in luctus orci hendrerit non. Praesent quis tellus dapibus dolor consectetur volutpat.'
+			details: 'Tangled'
 		}
 	];
 	
