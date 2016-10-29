@@ -45,7 +45,7 @@ angular.module('portalApp')
         	FIVESTAR: 'A  van  der  Waals  gas  is  known  to  have  strong  attractive  intermolecular  forces. Compared  to  an  ideal  gas  at  the  same  volume  andtemperature, the pressure is expected to be lower in the real gas.'
         },
     
-    ]
+    ];
 
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('exampracticeMain.html', 1); //1 means page 1
