@@ -20,7 +20,7 @@ angular.module('portalApp')
 		},
 		{
 			title:'Math',
-			tags: ['Mathh 115'],
+			tags: ['Math 115'],
 			details: 'No calculators?!'
 		},
 		{
