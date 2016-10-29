@@ -26,7 +26,7 @@ angular.module('portalApp')
 		{
 			title: 'Biology',
 			tags: ['tag C', 'tag K', 'tag B'],
-			details: 'Mauris nec ultricies metus. Cras et dictum justo. Nam a ullamcorper dolor. Cras fringilla metus vel facilisis vehicula.'
+			details: 'Cells'
 		},
 		{
 			title:'Linear Circuits',
