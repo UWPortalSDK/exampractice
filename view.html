@@ -19,6 +19,17 @@
 	<wr>
 		<wc><h2>{{detailsItem.title}}</h2></wc>
 	</wr>
-	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
-	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
+	<wr>
+    </wr>
+	<wr>
+        <wc>
+            <div class="pDetails">{{detailsItem.details}}</div>
+            <wc fill>
+            <span class="itemName">{{item.title}}</span>
+			<span ng-repeat= "tag in item.tags" class="label label-success">
+				{{tag}}
+			</span>
+        </wc>
+        </wc>
+    </wr>
 </script>
