@@ -112,4 +112,9 @@ angular.module('portalApp')
         
       
         */
+        
+        $scope.findSolution= function(item)
+        {
+            $scope.portalHelpers.showView('findSolutions.html', 3);
+        };
     }]);
