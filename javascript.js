@@ -67,25 +67,25 @@ angular.module('portalApp')
         };
 
          $scope.showSubDetails = function(item)
-    	{
-		// Make the item that user clicked available to the template
-		$scope.detailsItem = item;			
-		$scope.portalHelpers.showView('exampracticeExam.html', 3);
-    	};
+        {
+        // Make the item that user clicked available to the template
+        $scope.detailsItem = item;          
+        $scope.portalHelpers.showView('exampracticeExam.html', 3);
+        };
         
         $scope.showRandomQuestion = function()
-    	{		
-		$scope.portalHelpers.showView('exampracticeRanQues.html', 3);
-    	};
+        {       
+        $scope.portalHelpers.showView('exampracticeRanQues.html', 3);
+        };
       
         $scope.addQuestion = function()
-    {		
-		$scope.portalHelpers.showView('exampracticeAddQues.html', 3);
+    {       
+        $scope.portalHelpers.showView('exampracticeAddQues.html', 3);
     };
         
      
       /*
-       	$scope.showQuestionDetails = function(item) 
+        $scope.showQuestionDetails = function(item) 
         
         {
             // Make the item that user clicked available to the template
