@@ -7,6 +7,7 @@ angular.module('portalApp')
 			title:'Chemistry',
 			tags: ['CHE 102', 'CHE 135'],
 			details: 'The Alchemist Returns'
+        
 		},
 		{
 			title:'Physics',
@@ -34,7 +35,7 @@ angular.module('portalApp')
 			details: 'Tangled'
 		}
 	];
-	
+    
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('exampracticeMain.html', 1);
 	
