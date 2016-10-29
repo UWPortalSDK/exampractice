@@ -35,6 +35,19 @@ angular.module('portalApp')
 			details: 'Tangled'
 		}
 	];
+    $scope.subchem = [
+        {
+            title:'CHE 102',
+        },
+        {
+            title:'CHE135',
+        }
+    ];
+    $scope.subPhysics = [
+        {
+            title:'ECE 105',
+        },
+    ];
     
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('exampracticeMain.html', 1);
@@ -44,5 +57,10 @@ angular.module('portalApp')
 		// Make the item that user clicked available to the template
 		$scope.detailsItem = item;		
 		$scope.portalHelpers.showView('exampracticeDetails.html', 2);
-	}
+	};
+    $scope.showSubDetails = function(item){
+		// Make the item that user clicked available to the template
+		$scope.detailsItem = item;			
+		$scope.portalHelpers.showView('exampracticeExam.html', 2);
+    };
 }]);
