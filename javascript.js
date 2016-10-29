@@ -61,6 +61,6 @@ angular.module('portalApp')
     $scope.showSubDetails = function(item){
 		// Make the item that user clicked available to the template
 		$scope.detailsItem = item;			
-		$scope.portalHelpers.showView('exampracticeExam.html', 2);
+		$scope.portalHelpers.showView('exampracticeExam.html', 3);
     };
 }]);

@@ -24,9 +24,9 @@
             <h2>{{detailsItem.title}}</h2>
         </wc>
     </wr>
-    <wr ng-repeat="item in subchem" clickable ng-click="showSubDetails(item)">
+    <wr ng-repeat="tag in itmes" clickable ng-click="showSubDetails(item)">
         <wc fill>
-            <span class="itemName">{{item.title}}</span>
+            <span class="itemName">{{item.tags}}</span>
         </wc>
     </wr>
 </script>
@@ -35,7 +35,7 @@
 <script type="text/ng-template" id="exampracticeExam.html"> 
 	<wr>
 		<wc>
-            <h2>{{detailsItem.title}}</h2>
+            <h2>{{detailsItem.tag}}</h2>
         </wc>
     </wr>
 </script>
