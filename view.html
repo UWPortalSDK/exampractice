@@ -22,6 +22,9 @@
 	</wr>
 	<wr>  
         <wc>
+            
+      <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+            
 			<span ng-repeat= "tag in item.tags" class="label label-success">
 				{{tag}}
 			</span>
