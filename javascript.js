@@ -1,39 +1,84 @@
 angular.module('portalApp')
 .controller('exampracticeCtrl', ['$scope', function ($scope) {
 	
-	// mock data
-	$scope.items = [
-		{
-			title:'Item 1',
-			tags: ['tag A', 'tag B', 'tag C'],
-			details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-		},
-		{
-			title:'Item 2',
-			tags: ['tag D', 'tag E', 'tag F'],
-			details: 'Mauris cursus, sapien et malesuada ultrices, purus sapien iaculis tellus, quis semper magna est at leo.'
-		},
-		{
-			title:'Item 3',
-			tags: ['tag A', 'tag H'],
-			details: 'Donec id quam eu odio feugiat sagittis. Duis a tempus neque. Praesent elementum quis ante quis commodo. Sed tincidunt aliquet dolor sit amet laoreet. '
-		},
-		{
-			title:'Item 4',
-			tags: ['tag I'],
-			details: 'Proin sem quam, rutrum id ante id, scelerisque tempor quam. Curabitur pharetra turpis at sem placerat, non vehicula ligula tincidunt.'
-		},
-		{
-			title:'Item 5',
-			tags: ['tag C', 'tag K', 'tag B'],
-			details: 'Mauris nec ultricies metus. Cras et dictum justo. Nam a ullamcorper dolor. Cras fringilla metus vel facilisis vehicula.'
-		},
-		{
-			title:'Item 6',
-			tags: ['tag A', 'tag B', 'tag C'],
-			details: 'Curabitur scelerisque lorem risus, in luctus orci hendrerit non. Praesent quis tellus dapibus dolor consectetur volutpat.'
-		}
-	];
+	// Import variables and functions from service
+    $scope.item = {value:''};
+
+    // Model for the search and list example
+    $scope.model = {value: [{
+        title: "Chemistry",
+        details: "item 1 details",
+        category: '1'
+    }, {
+        title: "Physics",
+        details: "item 2 details",
+        category: '2'
+    }, {
+        title: "Item 3",
+        details: "item 3 details",
+        category: '1'
+    }, {
+        title: "item 4",
+        details: "item 4 details",
+        category: '2'
+    }, {
+        title: "item 5",
+        details: "item 5 details",
+        category: '1'
+    }, {
+        title: "item 6",
+        details: "item 6 details",
+        category: '2'
+    }]};
+
+    // initialize the service
+    sampleSimpleListFactory.init($scope);	
+	$scope.portalHelpers.showView('sampleSimpleListMain.html', 1);
+
+    // Handle click on an item in the list and search example
+    $scope.showDetails = function (item) {
+        // Set which item to show in the details view
+        $scope.item.value = item;
+        // Show details view in the second column
+        $scope.portalHelpers.showView('sampleSimpleListDetails.html', 2);
+    };
+
+    // Handle "previous item" click from the details page
+    $scope.prevItem = function () {
+        // get previous items in the list
+        var prevItem = $scope.portalHelpers.getPrevListItem();
+        // refresh details view with the new item
+        $scope.showDetails(prevItem);
+    }
+
+    $scope.nextItem = function () {
+        var nextItem = $scope.portalHelpers.getNextListItem();
+        $scope.showDetails(nextItem);
+    }
+
+}])
+    // Factory maintains the state of the widget
+    .factory('sampleSimpleListFactory', ['$http', '$rootScope', '$filter', '$q', function ($http, $rootScope, $filter, $q) {
+        var initialized = {
+            value: false
+        };
+
+
+        var sourcesLoaded = 0;
+
+        var init = function ($scope) {
+            if (initialized.value)
+                return;
+            initialized.value = true;
+        }
+
+
+        return {
+            init: init
+        };
+
+    }]);
+
 	
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('exampracticeMain.html', 1);
