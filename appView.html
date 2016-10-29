@@ -1,24 +1,96 @@
-<!-- Primary template that will get shown when widget loads -->
-<script type="text/ng-template" id="exampracticeMain.html"> 
-	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
-		<widget-cell fill>
-			<span class="itemName">{{item.title}}</span>
-			<span ng-repeat= "tag in item.tags" class="label label-success">
-				{{tag}}
-			</span>
-		</widget-cell>
-		<widget-cell>
-			<widget-icon name="angle-right"></widget-icon>
-		</widget-cell>
-	</widget-row>
+<!-- Primary template that will get shown when widget loads 1 -->
+<script type="text/ng-template" id="exampracticeMain.html">
+    <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+        <widget-cell>
+            <span class="itemName">{{item.title}}
+            </span>
+            <span ng-repeat="tag in item.tags" class="label label-success">
+                {{tag}}
+            </span>
+        </widget-cell>
+        <widget-cell>
+            <widget-icon name="angle-right"></widget-icon>
+        </widget-cell>
+    </widget-row>
 </script>
 
-<!-- This template gets shown when user clicks one of the items in the list -->
-<script type="text/ng-template" id="exampracticeDetails.html"> 
-	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-	<wr>
-		<wc><h2>{{detailsItem.title}}</h2></wc>
-	</wr>
-	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
-	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
+<!-- each catagroy 2 -->
+<script type="text/ng-template" id="exampracticeDetails.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <wr>
+        <wc>
+            <h2>{{detailsItem.title}}</h2>
+
+            <body>{{detailsItem.details}}</body>
+        </wc>
+    </wr>
+    <wr ng-repeat="tag in detailsItem.tags" clickable ng-click="showSubDetails(item)">
+        <wc>
+            <span class="label label-success">{{tag}}</span>
+        </wc>
+    </wr>
 </script>
+
+<!-- random question page 3 -->
+<script type="text/ng-template" id="exampracticeExam.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <wr>
+        <wc>Random Question</wc>
+    </wr>
+    <wr>
+        <wc><span class = "label label-success" clickable ng-click = "addQuestion(item)" >Add Quesion </span></wc>
+        </wr>
+    <wr>
+        <wc><span class = "label label-success" clickable ng-click = "showRandomQuestion(item)" >Random One Question </span></wc>
+        </wr>
+        <wr ng-repeat="item in che102questions" clickable ng-click="questionShow(item)">
+            <wc>
+                <span class= "label label-success"> {{item.title}} </span>
+            </wc>
+    </wr>
+</script>
+
+<!-- random question page 3 -->
+<script type="text/ng-template" id="exampracticeRanQues.html">
+    <wr>
+        <wc>
+            <h1>Random One Question</h1>
+        </wc>
+    </wr>
+    <wr>
+        <wc><span class="label label-success">Random One Question</span></wc>
+    </wr>
+    <wr>
+        <wc>
+             <input type="text" name="" value="input your answer..." />
+        </wc>
+    </wr>
+
+</script>
+
+<!-- add question page 4 -->
+<script type="text/ng-template" id="exampracticeAddQues.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <h1>Enter the question you're having difficulties with!</h1>
+    <form method='post'>
+       <wr><wc>NAME: <input type='text' name='name' id='name' /></wc></wr>
+       <wr><wc>UWID: <input type='text' name='email' id='email' /></wc></wr>
+       <wr><wc>Section: <input type='text' name='website' id='website' /></wc></wr>
+        <wr><wc>Question: <br/><textarea name='comment' id='comment'></textarea></wc></wr>
+       <wr><wc><input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' /></wc></wr>
+       <wr><wc><input type='submit' value='Submit' /></wc></wr>
+    </form>
+</script>
+
+<!-- page 5 --> 
+<script type="text/ng-template" id="exampracticeShowQues.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <wr>
+        <wc>
+            <h2>Question: {{questions.qONE}} </h2>
+            <body>Answer: {{questions.aONE}}</body>
+        </wc>
+    </wr>
+</script>
+
