@@ -85,7 +85,7 @@ angular.module('portalApp')
         {
             // Make the item that user clicked available to the template
             $scope.detailsItem = item;
-            $scope.portalHelpers.showView('exampracticeQuestion.html', 4);
+            $scope.portalHelpers.showView('exampracticeAddQ.html', 4);
         };
         
         
