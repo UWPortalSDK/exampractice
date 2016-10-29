@@ -4,10 +4,11 @@
 	<wr>
 		<wc>Random Question</wc>
 	</wr>
-	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">★★★★★</span></wc></wr>
-    <wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">★★★★</span></wc></wr>
-    <wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">★★★</span></wc></wr>
-    <wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">★★</span></wc></wr>
-    <wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">★</span></wc></wr>
+    <wr><wc><span ng-repeat= "tag in randomquestion.tags" class="label label-success">Random One Question</span></wc></wr>
+	<wr><wc><span ng-repeat= "tag in 5star.tags" class="label label-success">★★★★★ Questions</span></wc></wr>
+    <wr><wc><span ng-repeat= "tag in 4star.tags" class="label label-success">★★★★ Questions</span></wc></wr>
+    <wr><wc><span ng-repeat= "tag in 3star.tags" class="label label-success">★★★ Questions</span></wc></wr>
+    <wr><wc><span ng-repeat= "tag in 2star.tags" class="label label-success">★★ Questions</span></wc></wr>
+    <wr><wc><span ng-repeat= "tag in 1star.tags" class="label label-success">★ Questions</span></wc></wr>
 	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
 </script>
