@@ -6,7 +6,7 @@ angular.module('portalApp')
 		{
 			title:'Chemistry',
 			tags: ['CHE 102', 'CHE 135'],
-			details: 'The Alchemist'
+			details: 'The Alchemist Returns'
 		},
 		{
 			title:'Physics',
@@ -20,7 +20,7 @@ angular.module('portalApp')
 		},
 		{
 			title:'Math',
-			tags: ['Mathh 115'],
+			tags: ['Math 115'],
 			details: 'No calculators?!'
 		},
 		{
