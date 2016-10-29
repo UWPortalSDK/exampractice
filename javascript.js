@@ -7,6 +7,7 @@ angular.module('portalApp')
 			title:'Chemistry',
 			tags: ['CHE 102', 'CHE 135'],
 			details: 'The Alchemist Returns'
+        
 		},
 		{
 			title:'Physics',
