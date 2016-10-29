@@ -15,10 +15,69 @@
 
 <!-- This template gets shown when user clicks one of the items in the list -->
 <script type="text/ng-template" id="exampracticeDetails.html"> 
-	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-	<wr>
-		<wc><h2>{{detailsItem.title}}</h2></wc>
-	</wr>
-	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
-	<wr><wc><div class="pDetails">{{detailsItem.details}}</div></wc></wr>
+	<!-- SEARCH AND LIST EXAMPLE -->
+    <div class="collapseMe">
+        <widget-row>
+            <widget-cell>
+                <h2>Search subject</h2>
+            </widget-cell>
+        </widget-row>
+        
+        <widget-search 
+             label="What subject are you looking for?" 
+             placeholder="Subject" 
+             search-results-title="Search Results"
+             data="model" 
+             min-char="2" 
+             fields="['title','details']">
+            <widget-filter 
+                    fields="['category']" 
+                    filters="[{value:'1',text:'Number 1'},{value:'2',text:'Number 2'}]">
+            </widget-filter>
+
+            <widget-searching>
+                <widget-list list="item in searchResults track by item.title" show-items="3">
+                    <widget-row clickable ng-click="showDetails(item)">
+                        <widget-cell fill>{{item.title}}</widget-cell>
+                        <widget-cell>
+                            <widget-icon name="angle-right"></widget-icon>
+                        </widget-cell>
+                    </widget-row>
+                </widget-list>
+            </widget-searching>
+
+            <widget-not-searching>
+                <widget-row>
+                    <widget-cell>
+                        <h2>Item List</h2>
+                    </widget-cell>
+                </widget-row>
+                <widget-list list="item in model.value track by item.title" show-items="3">
+                    <widget-row clickable ng-click="showDetails(item)">
+                        <widget-cell fill>{{item.title}}</widget-cell>
+                        <widget-cell>
+                            <widget-icon name="angle-right"></widget-icon>
+                        </widget-cell>
+                    </widget-row>
+                </widget-list>
+            </widget-not-searching>
+        </widget-search>
+    </div>
+
+</script>
+
+<!-- VIEW FOR THE SEARCH AND LIST EXAMPLE -->
+<script type="text/ng-template" id="sampleSimpleListDetails.html">
+    <widget-list-controls prev-click="prevItem" next-click="nextItem" original-item="item.value" prev-text="Previous Item"
+                          next-text="Next Item"></widget-list-controls>
+    <widget-row>
+        <widget-cell>
+            <h2>{{item.value.title}}</h2>
+        </widget-cell>
+    </widget-row>
+    <widget-row>
+        <widget-cell>
+            <div class="pHighlight">{{item.value.details}}</div>
+        </widget-cell>
+    </widget-row>
 </script>
