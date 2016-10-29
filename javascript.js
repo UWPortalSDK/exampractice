@@ -34,7 +34,7 @@ angular.module('portalApp')
 			details: 'Tangled'
 		}
 	];
-	
+    
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('exampracticeMain.html', 1);
 	
