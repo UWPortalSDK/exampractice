@@ -50,12 +50,16 @@ angular.module('portalApp')
     //exampracticeMain.html means main is on page 1
 	
 	// This function gets called when user clicks an item in the list
-	$scope.showDetails = function(item){
+	$scope.showDetails = function(item)
+    
+    {
 		// Make the item that user clicked available to the template
 		$scope.detailsItem = item;		
 		$scope.portalHelpers.showView('exampracticeDetails.html', 2);
 	};
-    $scope.showSubDetails = function(item){
+    
+    $scope.showSubDetails = function(item)
+    {
 		// Make the item that user clicked available to the template
 		$scope.detailsItem = item;			
 		$scope.portalHelpers.showView('exampracticeExam.html', 3);
