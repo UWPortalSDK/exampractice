@@ -30,7 +30,7 @@ angular.module('portalApp')
 		},
 		{
 			title:'Linear Circuits',
-			tags: ['tag A', 'tag B', 'tag C'],
+			tags: ['ECE 140'],
 			details: 'Tangled'
 		}
 	];
