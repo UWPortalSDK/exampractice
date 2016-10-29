@@ -1,6 +1,7 @@
 <!-- Primary template that will get shown when widget loads 1 -->
 <script type="text/ng-template" id="exampracticeMain.html">
-    <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+   <div class="list"> 
+    <div class="item" ng-repeat="item in items" clickable ng-click="showDetails(item)">
         <widget-cell>
             <span class="itemName">{{item.title}}
             </span>
@@ -11,7 +12,8 @@
         <widget-cell>
             <widget-icon name="angle-right"></widget-icon>
         </widget-cell>
-    </widget-row>
+       </div>
+    </div>
 </script>
 
 <!-- each catagroy 2 -->
