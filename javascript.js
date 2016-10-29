@@ -34,7 +34,7 @@ angular.module('portalApp')
             {
                 title: '★ Questions',
                 qONE: 'What is the molar mass of CO2?',
-                aONE: '44.01'
+                aONE: '44.01g/mol'
             },
             {
                 title: '★★ Questions',

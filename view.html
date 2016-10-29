@@ -9,7 +9,6 @@
             </span>
         </widget-cell>
         <widget-cell>
-            <widget-icon name="angle-right"></widget-icon>
         </widget-cell>
     </widget-row>
 </script>
@@ -34,12 +33,14 @@
 <!-- random question page 3 -->
 <script type="text/ng-template" id="exampracticeExam.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-    <wr>
+    <div class="list">
+        
+      
         <wc>Random Question</wc>
-    </wr>
-    <wr>
+    </div>
+    <div class="list">
         <wc><span class = "label label-success" clickable ng-click = "addQuestion(item)" >Add Question </span></wc>
-        </wr>
+        </div>
     <wr clickable ng-click = "showRandomQuestion(item)">
         <wc><span class = "label label-success" >Random One Question </span></wc>
     </wr>

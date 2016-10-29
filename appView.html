@@ -37,20 +37,22 @@
 <!-- random question page 3 -->
 <script type="text/ng-template" id="exampracticeExam.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-    <wr>
+    <div>
         <wc>Random Question</wc>
-    </wr>
-    <wr>
+    </div>
+    <div class="list">
+        <div class="item">
         <wc><span class = "label label-success" clickable ng-click = "addQuestion(item)" >Add Quesion </span></wc>
-        </wr>
-    <wr>
+        
+    
         <wc><span class = "label label-success" clickable ng-click = "showRandomQuestion(item)" >Random One Question </span></wc>
-        </wr>
-        <wr ng-repeat="item in che102questions" clickable ng-click="questionShow(item)">
+        </div>
+        <div class="item" ng-repeat="item in che102questions" clickable ng-click="questionShow(item)">
             <wc>
                 <span class= "label label-success"> {{item.title}} </span>
             </wc>
-    </wr>
+    </div>
+    </div>
 </script>
 
 <!-- random question page 3 -->
@@ -95,5 +97,19 @@
             <body>Answer: {{questions.aONE}}</body>
         </wc>
     </wr>
+</script>
+<!--Show Question-->
+<script type="text/ng-template" id="findSolutions.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <div>
+        <wc>
+            <h2>Solution to the question: </h2> <br/>
+            </wc> 
+        </div>   
+   <div>
+       <wc>
+           <body><button class="button">{{questions.aONE}}</button></body>
+        </wc>
+    </div>
 </script>
 
