@@ -24,9 +24,9 @@
             <h2>{{detailsItem.title}}</h2>
         </wc>
     </wr>
-    <wr ng-repeat="tag in item" clickable ng-click="showSubDetails(item)">
-        <wc fill>
-            <span class="itemName">{{item.tag}}</span>
+    <wr ng-repeat="tag in detailsItem.tags" clickable ng-click="showSubDetails(item)">
+        <wc>
+            <span class="label label-success">{{tag}}</span>
         </wc>
     </wr>
 </script>
