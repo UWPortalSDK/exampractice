@@ -30,7 +30,8 @@ angular.module('portalApp')
             tags: ['ECE 140'],
             details: 'Tangled'
         }];
-        $scope.che102questions = [{
+        $scope.che102questions = [
+            {
                 title: '★ Questions',
                 qONE: 'What is the molar mass of CO2?',
 				aONE: '44.01'
