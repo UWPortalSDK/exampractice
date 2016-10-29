@@ -30,7 +30,8 @@ angular.module('portalApp')
             tags: ['ECE 140'],
             details: 'Tangled'
         }];
-        $scope.che102questions = [{
+        $scope.che102questions = [
+            {
                 title: '★ Questions',
                 qONE: 'What is the molar mass of CO2?',
 				aONE: '44.01'
@@ -86,6 +87,12 @@ angular.module('portalApp')
             // Make the item that user clicked available to the template
             $scope.detailsItem = item;
             $scope.portalHelpers.showView('exampracticeAddQ.html', 4);
+        };
+        
+        $scope.questionShow = function(item)
+        {
+            $scope.detailsItem = item;
+            $scope.portalHelpers.showView('exampracticeQuestions', 5);
         };
         
         
