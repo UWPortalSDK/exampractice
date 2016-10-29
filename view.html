@@ -20,17 +20,22 @@
 <script type="text/ng-template" id="exampracticeDetails.html"> 
 	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
 	<wr>
-		<wc><h2>{{detailsItem.title}}</h2></wc>
-        <wc><body>{{detailsItem.details}} </body></wc>
-	</wr>
-	<wr>  
-        
-        <wc>
-            
-            
-			<span ng-repeat= "tag in item.tags" class="label label-success">
-				{{tag}}
-			</span>
+		<wc>
+            <h2>{{detailsItem.title}}</h2>
+        </wc>
+    </wr>
+    <wr ng-repeat="item in subchem" clickable ng-click="showSubDetails(item)">
+        <wc fill>
+            <span class="itemName">{{item.title}}</span>
+        </wc>
+    </wr>
+</script>
+
+<!-- Page Three -->
+<script type="text/ng-template" id="exampracticeExam.html"> 
+	<wr>
+		<wc>
+            <h2>{{detailsItem.title}}</h2>
         </wc>
     </wr>
 </script>
