@@ -24,7 +24,7 @@
             <h2>{{detailsItem.title}}</h2>
         </wc>
     </wr>
-    <wr ng-repeat="item in items" clickable ng-click="showSubDetails(item)">
+    <wr ng-repeat="tag in item.tags" clickable ng-click="showSubDetails(item)">
         <wc fill>
             <span class="itemName">{{item.tags}}</span>
         </wc>
