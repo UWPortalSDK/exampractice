@@ -1,4 +1,4 @@
-<!-- Primary template that will get shown when widget loads -->
+<!-- PAGE 1 -- Primary template that will get shown when widget loads -->
 <script type="text/ng-template" id="exampracticeMain.html">
     <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
         <widget-cell>
@@ -14,7 +14,7 @@
     </widget-row>
 </script>
 
-<!-- This template gets shown when user clicks one of the items in the list -->
+<!-- PAGE 2 -- This template gets shown when user clicks one of the items in the list -->
 <script type="text/ng-template" id="exampracticeDetails.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
     <wr>
@@ -31,7 +31,7 @@
     </wr>
 </script>
 
-<!-- random question page -->
+<!-- PAGE 3 -- Random question page -->
 <script type="text/ng-template" id="exampracticeExam.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
     <wr>
