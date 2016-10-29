@@ -29,8 +29,7 @@ angular.module('portalApp')
             title: 'Linear Circuits',
             tags: ['ECE 140'],
             details: 'Tangled'
-        }];   
-        
+        }];
         $scope.che102questions = [
             {
                 title: '★ Questions',
@@ -85,11 +84,18 @@ angular.module('portalApp')
         };
       
         $scope.addQuestion = function()
-        {       
+    {       
         $scope.portalHelpers.showView('exampracticeAddQues.html', 3);
+    };
+        
+     	$scope.questionShow = function(item)
+        {
+          $scope.questions = item;
+          $scope.portalHelpers.showView('exampracticeShowQues.html', 3);
         };
         
      
+        
       /*
         $scope.showQuestionDetails = function(item) 
         
