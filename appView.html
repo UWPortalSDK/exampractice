@@ -20,17 +20,18 @@
 <script type="text/ng-template" id="exampracticeDetails.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
     <div class="list">
+        <div class="item">
         <wc>
             <h2>{{detailsItem.title}}</h2>
 
             <body>{{detailsItem.details}}</body>
         </wc>
-    </wr>
-    <wr ng-repeat="tag in detailsItem.tags" clickable ng-click="showSubDetails(item)">
+    </div>
+    <div class="item" ng-repeat="tag in detailsItem.tags" clickable ng-click="showSubDetails(item)">
         <wc>
             <span class="label label-success">{{tag}}</span>
         </wc>
-    </div>
+        </div></div>
 </script>
 
 <!-- random question page 3 -->
