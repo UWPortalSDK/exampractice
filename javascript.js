@@ -80,7 +80,7 @@ angular.module('portalApp')
         
         
         
-        $scope.showQuestionDetails = function(item) 
+        $scope.showQuestion = function(item) 
         
         {
             // Make the item that user clicked available to the template
