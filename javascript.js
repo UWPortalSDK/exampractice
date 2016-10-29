@@ -83,7 +83,14 @@ angular.module('portalApp')
         $scope.portalHelpers.showView('exampracticeAddQues.html', 3);
     };
         
+     	$scope.questionShow = function(item)
+        {
+          $scope.questions = item;
+          $scope.portalHelpers.showView('exampracticeShowQues.html', 3);
+        };
+        
      
+        
       /*
         $scope.showQuestionDetails = function(item) 
         
