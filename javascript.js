@@ -6,6 +6,7 @@ angular.module('portalApp')
         $scope.items = [{
             title: 'Chemistry',
             tags: ['CHE 102', 'CHE 135'],
+            questiontype: ['5 Stars','4 Stars','3 Stars','2 Stars','1 Stars']
             details: 'The Alchemist Returns'
 
         }, {
