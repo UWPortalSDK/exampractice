@@ -5,7 +5,7 @@
 			<span class="itemName">{{item.title}}</span>
 			<span ng-repeat= "tag in item.tags" class="label label-success">
 				{{tag}}
-			</span>
+			</span>  
 		</widget-cell>
 		<widget-cell>
 			<widget-icon name="angle-right"></widget-icon>
@@ -18,31 +18,26 @@
 	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
 	<wr>
 		<wc><h2>{{detailsItem.title}}</h2></wc>
-        <wc><body>{{detailsItem.details}}</body></wc>
 	</wr>
 	<wr>
+        
+        
+          var opened = window.open("Hello");
+opened.document.write("<html><head><title>My title</title></head><body>test</body></html>"); 
+        
         <wc>
+            
+            
+            
+            
+            
+            
+            
+            
+            
 			<span ng-repeat= "tag in item.tags" class="label label-success">
 				{{tag}}
 			</span>
         </wc>
     </wr>
 </script>
-
-<!-- Dont freak out. This is just a test
-<form method='post'>
-  NAME: <input type='text' name='name' id='name' /><br />
-
-  UWID :  <input type='text' name='uwid' id='uwid' /><br />
-
-  Section: <input type='text' name='website' id='website' /><br />
-
-  Question: <textarea name='comment' id='comment'></textarea><br />
-<input type='submit' value='Submit' />  
-    <button onclick="myJsFunction()">submit</button>
-<script type="text/javascript">
- function myJsFunction(){
-    var text=document.getElementById('input1').value;
- }
-</script>
-</form> -->
