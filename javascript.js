@@ -1,5 +1,6 @@
 angular.module('portalApp')
-.controller('exampracticeCtrl', ['$scope', function ($scope) {
+.controller('exampracticeCtrl', ['$scope', function ($scope) { //There is a
+    // function "$scope" here
 	
 	// mock data
 	$scope.items = [
@@ -45,7 +46,8 @@ angular.module('portalApp')
     ];
     
 	// Show main view in the first column as soon as controller loads
-	$scope.portalHelpers.showView('exampracticeMain.html', 1);
+	$scope.portalHelpers.showView('exampracticeMain.html', 1); //1 means page 1
+    //exampracticeMain.html means main is on page 1
 	
 	// This function gets called when user clicks an item in the list
 	$scope.showDetails = function(item){
