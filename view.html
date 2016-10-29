@@ -38,25 +38,15 @@
         <wc>Random Question</wc>
     </wr>
     <wr>
-        <wc><span class="label label-success" clickable ng-click="addQuestion(item)">Add Question</span></wc>
-    </wr>
+        <wc><span class = "label label-success" clickable ng-click = "addQuestion(item)" >Add Quesion </span></wc>
+        </wr>
     <wr>
-        <wc><span class="label label-success" clickable ng-click="showRandomQuestion()">Random One Question</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★★★ Extremely Hard Questions</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★★ Hard Questions</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★ Normal Questions</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★ Easy Questions</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★ Extremely Easy Questions</span></wc>
+        <wc><span class = "label label-success" clickable ng-click = "showRandomQuestion(item)" >Random One Question </span></wc>
+        </wr>
+        <wr ng-repeat="item in che102questions" clickable ng-click="questionShow(item)">
+            <wc>
+                <span class= "label label-success"> {{item.title}} </span>
+            </wc>
     </wr>
 </script>
 
@@ -75,6 +65,7 @@
              <input type="text" name="" value="input your answer..." />
         </wc>
     </wr>
+
 </script>
 
 <!-- add question page 4 -->
@@ -90,4 +81,15 @@
        <wr><wc><input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' /></wc></wr>
        <wr><wc><input type='submit' value='Submit' /></wc></wr>
     </form>
+</script>
+
+<!-- page 5 --> 
+<script type="text/ng-template" id="exampracticeShowQues.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <wr>
+        <wc>
+            <h2>{{displayItems.qONE}} </h2>
+            <body>{{displayItems.aONE}}</body>
+        </wc>
+    </wr>
 </script>
