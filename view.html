@@ -62,7 +62,7 @@
     </wr>
     <wr>
         <wc>
-             <input type="text" name="" value="input your answer..." />
+             <input type="text" name="hello" value="input your answer..." />
         </wc>
     </wr>
 
@@ -88,8 +88,26 @@
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
     <wr>
         <wc>
-            <h2>Question: {{questions.qONE}} </h2>
-            <body>Answer: {{questions.aONE}}</body>
+            <h2>Question: {{questions.qONE}} </h2> <br/>
+        </wc> </wr>
+   <wr>
+       <wc>
+           <span class="label label-success" clickable ng-click = "findSolution(item)">See Solution</span></wc>
+    </wr>
+        
+</script>
+
+<!--Show Question-->
+<script type="text/ng-template" id="findSolutions.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <wr>
+        <wc>
+            <h2>Solution to: </h2> <br/>
+            </wc> 
+        </wr>   
+   <wr>
+       <wc>
+           <body>Answer: {{questions.aONE}}</body>
         </wc>
     </wr>
 </script>
