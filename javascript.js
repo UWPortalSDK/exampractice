@@ -65,7 +65,6 @@ angular.module('portalApp')
 
         // This function gets called when user clicks an item in the list
         $scope.showDetails = function(item)
-
         {
             // Make the item that user clicked available to the template
             $scope.detailsItem = item;
@@ -78,11 +77,7 @@ angular.module('portalApp')
             $scope.detailsItem = item;
             $scope.portalHelpers.showView('exampracticeExam.html', 3);
         };
-        
-        
-        
-        $scope.showQuestion = function(item) 
-        
+        $scope.showQuestion = function(item)  
         {
             // Make the item that user clicked available to the template
             $scope.detailsItem = item;
@@ -93,8 +88,5 @@ angular.module('portalApp')
         {
             $scope.detailsItem = item;
             $scope.portalHelpers.showView('exampracticeQuestions', 5);
-        };
-        
-        
-        
+        };    
     }]);
