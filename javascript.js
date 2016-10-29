@@ -26,11 +26,11 @@ angular.module('portalApp')
 		{
 			title: 'Biology',
 			tags: ['BIO 134'],
-			details: 'I have photographic memory!!'
+			details: 'I have a photographic memory!!'
 		},
 		{
 			title:'Linear Circuits',
-			tags: ['ECE 140'],
+			tags: ['tag A', 'tag B', 'tag C'],
 			details: 'Tangled'
 		}
 	];
