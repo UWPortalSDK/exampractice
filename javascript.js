@@ -10,7 +10,7 @@ angular.module('portalApp')
 		},
 		{
 			title:'Physics',
-			tags: ['ECE 105', 'tag E', 'tag F'],
+			tags: ['ECE 105']
 			details: 'Hit your head through the wall'
 		},
 		{
