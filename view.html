@@ -14,7 +14,7 @@
     </widget-row>
 </script>
 
-<!-- each category 2 -->
+<!-- each catagroy 2 -->
 <script type="text/ng-template" id="exampracticeDetails.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
     <wr>
@@ -38,15 +38,25 @@
         <wc>Random Question</wc>
     </wr>
     <wr>
-        <wc><span class = "label label-success" clickable ng-click = "addQuestion(item)" >Add Quesion </span></wc>
-        </wr>
+        <wc><span class="label label-success" clickable ng-click="addQuestion(item)">Add Question</span></wc>
+    </wr>
     <wr>
-        <wc><span class = "label label-success" clickable ng-click = "showRandomQuestion(item)" >Random One Question </span></wc>
-        </wr>
-        <wr ng-repeat="item in che102questions" clickable ng-click="questionShow(item)">
-            <wc>
-                <span class= "label label-success"> {{item.title}} </span>
-            </wc>
+        <wc><span class="label label-success" clickable ng-click="showRandomQuestion()">Random One Question</span></wc>
+    </wr>
+    <wr>
+        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★★★ Extremely Hard Questions</span></wc>
+    </wr>
+    <wr>
+        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★★ Hard Questions</span></wc>
+    </wr>
+    <wr>
+        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★ Normal Questions</span></wc>
+    </wr>
+    <wr>
+        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★ Easy Questions</span></wc>
+    </wr>
+    <wr>
+        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★ Extremely Easy Questions</span></wc>
     </wr>
 </script>
 
@@ -54,42 +64,39 @@
 <script type="text/ng-template" id="exampracticeRanQues.html">
     <wr>
         <wc>
-            <h1>Random One Question</h1>
+            <h3>Random One Question</h3>
         </wc>
     </wr>
+    <wr><h4>question content..........</h4></wr>
+    
+    <widget-row ng-repeat="item in che102questions" clickable ng-click="showDetails(item)">
+        <widget-cell>
+            <span class="itemName">{{item.qONE}}
+            </span>
+            <span class="itemName">{{item.qONE}}
+            </span>
+        </widget-cell>
+        
+    </widget-row>
+    
     <wr>
-        <wc><span class="label label-success">Random One Question</span></wc>
-    </wr>
-    <wr>
+        <wc class="label label-success">Give your answer:</wc>
         <wc>
-             <input type="text" name="" value="input your answer..." />
+             <textarea name="" placeholder="input your answer..." ></textarea>
         </wc>
     </wr>
-
 </script>
 
 <!-- add question page 4 -->
 <script type="text/ng-template" id="exampracticeAddQues.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-    <h1>Enter the question you're having difficulties with!</h1>
+    <h1>sdfsdfsdfsdfsdfs</h1>
     <form method='post'>
-       <wr><wc>NAME: <input type='text' name='name' id='name' /></wc></wr>
-       <wr><wc>UWID: <input type='text' name='email' id='email' /></wc></wr>
-       <wr><wc>Section: <input type='text' name='website' id='website' /></wc></wr>
-        <wr><wc>Question: <br/><textarea name='comment' id='comment'></textarea></wc></wr>
+       <wr><wc>NAME:<input type='text' name='name' id='name' /></wc></wr>
+       <wr><wc>UWID :<input type='text' name='email' id='email' /></wc></wr>
+       <wr><wc>Section:<input type='text' name='website' id='website' /></wc></wr>
+       <wr><wc>Question:<textarea name='comment' id='comment'></textarea></wc></wr>
        <wr><wc><input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' /></wc></wr>
        <wr><wc><input type='submit' value='Submit' /></wc></wr>
     </form>
-</script>
-
-<!-- page 5 --> 
-<script type="text/ng-template" id="exampracticeShowQues.html">
-    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-    <wr>
-        <wc>
-            <h2>{{displayItems.qONE}} </h2>
-            <body>{{displayItems.aONE}}</body>
-        </wc>
-    </wr>
 </script>
