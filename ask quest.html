@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
-		<title>My Photo Page</title>
-	</head>
-	<body>
+<script type="text/ng-template" id="exampracticeExam.html">
+    <wr>
+        <wc>
+            <form method='post'>
+                <b>Name: </b>
+                <input type='text' name='name' id='name' />
+                <br /> <b>UWID :</b>
+                <input type='text' name='uwid' id='uwid' />
+                <br /> <b>Question: </b>
+                <textarea name='comment' id='comment'></textarea>
+                <br />
+                <input type='submit' value='Submit' />
 
-
-<form method='post'>
-  NAME: <input type='text' name='name' id='name' /><br />
-
-  UWID :  <input type='text' name='email' id='email' /><br />
-
-  Section: <input type='text' name='website' id='website' /><br />
-
-  Question:<br />
-  <textarea name='comment' id='comment'></textarea><br />
-
-  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
-
-  <input type='submit' value='Submit' />  
-</form></body>
-</html>
+                <script type="text/javascript">
+                    function myJsFunction() {
+                        var text = document.getElementById('input1').value;
+                    }
+                </script>
+            </form>
+            </wc>
+    </wr>
