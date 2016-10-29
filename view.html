@@ -38,27 +38,18 @@
         <wc>Random Question</wc>
     </wr>
     <wr>
-        <wc><span class="label label-success" clickable ng-click="addQuestion(item)">Add Question</span></wc>
+        <wc><span class="label label-success" clickable ng-click="showQuestion(item)">Add Question</span></wc>
     </wr>
+
     <wr>
         <wc><span class="label label-success" clickable ng-click="showRandomQuestion()">Random One Question</span></wc>
     </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★★★ Extremely Hard Questions</span></wc>
+        <wr ng-repeat="item in che102questions" clickable ng-click="questionShow(item)">
+            <wc>
+                <span class= "label label-success"> {{item.title}} </span>
+            </wc>
     </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★★ Hard Questions</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★★ Normal Questions</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★★ Easy Questions</span></wc>
-    </wr>
-    <wr>
-        <wc><span class="label label-success" clickable ng-click="showOneQues(item)">★ Extremely Easy Questions</span></wc>
-    </wr>
-</script>
+
 
 <!-- random question page 3 -->
 <script type="text/ng-template" id="exampracticeRanQues.html">
