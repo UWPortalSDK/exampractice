@@ -37,9 +37,9 @@
 <!-- random question page 3 -->
 <script type="text/ng-template" id="exampracticeExam.html">
     <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-    
+    <div>
         <wc>Random Question</wc>
-    
+    </div>
     <div class="list">
         <div class="item">
         <wc><span class = "label label-success" clickable ng-click = "addQuestion(item)" >Add Quesion </span></wc>
@@ -97,5 +97,19 @@
             <body>Answer: {{questions.aONE}}</body>
         </wc>
     </wr>
+</script>
+<!--Show Question-->
+<script type="text/ng-template" id="findSolutions.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <div>
+        <wc>
+            <h2>Solution to the question: </h2> <br/>
+            </wc> 
+        </div>   
+   <div>
+       <wc>
+           <body>{{questions.aONE}}</body>
+        </wc>
+    </div>
 </script>
 
