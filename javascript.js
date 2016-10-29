@@ -61,7 +61,7 @@ angular.module('portalApp')
         
          $scope.randomquestions = [
             {
-                title: '★★★★★ Questions',
+                title: '★★★★★ Question',
                 qONE: 'A  van  der  Waals  gas  is  known  to  have  strong  attractive  intermolecular  forces. Compared  to  an  ideal  gas  at  the  same  volume  andtemperature, the pressure is expected to be lower in the real gas.',
                 aONE: 'FALSE'
             },
