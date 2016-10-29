@@ -6,6 +6,7 @@ angular.module('portalApp')
         $scope.items = [{
             title: 'Chemistry',
             tags: ['CHE 102', 'CHE 135'],
+            questiontype: ['5 Stars','4 Stars','3 Stars','2 Stars','1 Stars'],
             details: 'The Alchemist Returns'
 
         }, {
@@ -66,9 +67,23 @@ angular.module('portalApp')
             $scope.portalHelpers.showView('exampracticeDetails.html', 2);
         };
 
-        $scope.showSubDetails = function(item) {
+        $scope.showSubDetails = function(item) 
+        {
             // Make the item that user clicked available to the template
             $scope.detailsItem = item;
             $scope.portalHelpers.showView('exampracticeExam.html', 3);
         };
+        
+        
+        
+        $scope.showQuestionDetails = function(item) 
+        
+        {
+            // Make the item that user clicked available to the template
+            $scope.detailsItem = item;
+            $scope.portalHelpers.showView('exampracticeQuestion.html', 4);
+        };
+        
+        
+        
     }]);
