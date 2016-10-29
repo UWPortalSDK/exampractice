@@ -43,11 +43,6 @@ angular.module('portalApp')
             title:'CHE135',
         }
     ];
-    $scope.subPhysics = [
-        {
-            title:'ECE 105',
-        },
-    ];
     
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('exampracticeMain.html', 1);
